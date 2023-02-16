@@ -1,25 +1,22 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
-const cleanCSS = require('gulp-clean-css');
+// const cleanCSS = require('gulp-clean-css');
+// const rename = require('gulp-rename');
 
 gulp.task('copyJS', async () => {
-    return gulp.src('app/js/*.js')
-        .pipe(gulp.dest('public/js'));
+    return gulp.src('app/script/*.js')
+        .pipe(gulp.dest('public/script'));
 })
 
 gulp.task('copyCSS', async () => {
     return gulp.src('app/css/*.css')
-    .pipe(css({
-        errorLogToConsole: true
-        // outputStyle: 'compressed'
-    }))
     .on('error', console.error.bind(console))
     .pipe(autoprefixer({
         ovverideBrowserlist: ['last 10 versions'],
-        cascade: true
+        cascade: false
     }))
-    .pipe(cleanCSS())
+    // .pipe(cleanCSS())
     // .pipe(rename({ suffix: '.min'}))
     .pipe(gulp.dest('public/css'));
 })
@@ -33,7 +30,7 @@ gulp.task('server', async () => {
 
 gulp.task('watch', async () => {
     gulp.watch('app/css/*.css', gulp.series('copyCSS'));
-    gulp.watch('app/js/*.js', gulp.series('copyJS'));
+    gulp.watch('app/script/*.js', gulp.series('copyJS'));
 })
 
 gulp.task('default', gulp.parallel('watch', 'server'));
