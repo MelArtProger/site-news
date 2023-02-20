@@ -22,9 +22,9 @@
                     siteNews
                 </a>
                 <form class="d-flex">
-                    <input class="form-control mr-2" type="search" placeholder="Поиск" aria-label="Search">
+                    <input class="form-control mr-2" type="search" placeholder="Поиск"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 </form>
-                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Главная</a>
                     </li>
@@ -38,19 +38,38 @@
             </div>
         </nav>       
     </header>
-
-    <div id="reclam">
-        <div class="reclamLeft">
-            <div class="jumbotron">
-                <h1 class="display-4">Lorem, ipsum.</h1>
-                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit commodi accusantium incidunt qui! Dolores autem iure quisquam nulla iste eum!</p>
-                <hr class="my-4">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, natus!</p>
-                <a class="btn btn-warning btn-lg" href="#" role="button">Читать далее</a>
+    
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Форма поиска</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input class="form-control mr-2" type="search" placeholder="Поиск">
+                </div>
             </div>
         </div>
-        <div class="reclamRight">
-            <img src="https://vebrost.ru/upload/iblock/e09/20-Most-Common-Work-from-Home-Job-Titles.jpg" class="img-thumbnail" alt="image">
+    </div>
+
+    <div id="reclam">
+        <div class="row m-3">
+            <div class="col-md-6 col-lg-5">
+                <div class="jumbotron">
+                    <h1 class="display-4">Lorem, ipsum.</h1>
+                    <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit commodi accusantium incidunt qui!
+                        Dolores autem iure quisquam nulla iste eum!</p>
+                    <hr class="my-4">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, natus!</p>
+                    <a class="btn btn-warning" href="#" role="button">Читать далее</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-7 mt-3">
+                <img src="https://vebrost.ru/upload/iblock/e09/20-Most-Common-Work-from-Home-Job-Titles.jpg" class="img-thumbnail"
+                    alt="image">
+            </div>
         </div>
     </div>
 
@@ -62,7 +81,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Lorem, ipsum.</h5>
                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, possimus.</p>
-                    <a href="#" class="btn btn-warning">Читать далее</a>
+                    <a href="#" class="btn btn-warning btn-sm">Читать далее</a>
                 </div>
             </div>
             <div class="card">
@@ -71,7 +90,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Lorem, ipsum.</h5>
                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, possimus.</p>
-                    <a href="#" class="btn btn-warning">Читать далее</a>
+                    <a href="#" class="btn btn-warning btn-sm">Читать далее</a>
                 </div>
             </div>
             <div class="card">
@@ -80,7 +99,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Lorem, ipsum.</h5>
                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, possimus.</p>
-                    <a href="#" class="btn btn-warning">Читать далее</a>
+                    <a href="#" class="btn btn-warning btn-sm">Читать далее</a>
                 </div>
             </div>
             <div class="card">
@@ -89,11 +108,11 @@
                 <div class="card-body">
                     <h5 class="card-title">Lorem, ipsum.</h5>
                     <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod, possimus.</p>
-                    <a href="#" class="btn btn-warning">Читать далее</a>
+                    <a href="#" class="btn btn-warning btn-sm">Читать далее</a>
                 </div>
             </div>
             <div id="posts"></div>
-            <button class="btn btn-danger btn-lg" id="button" onclick="addNews()">Показать ещё ></button>
+            <button class="btn btn-danger" id="button" onclick="addNews()">Показать ещё ></button>
         </div>
 
         <div class="newsRight">
@@ -132,6 +151,7 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
     <script src="script/main.js"></script>
 </body>
 </html>
