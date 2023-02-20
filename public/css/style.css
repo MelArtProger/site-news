@@ -23,6 +23,10 @@ header, footer, #reclam, main {
     margin: 25px auto;
 }
 
+header {
+    transition: all 1s ease;
+}
+
 .navbar {
     border-radius: 10px;
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
@@ -43,12 +47,21 @@ header nav ul li .nav-link {
     margin-right: 30px !important;
     border: 1px solid #ced4da;
     border-radius: 10px;
-    transition: transform 600ms ease;
+    transition: transform 1s ease;
     background: #eee;
 }
 
 header nav ul li .nav-link:last-child {
     margin-right: 0;
+}
+
+.fixed {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 25px;
+    z-index: 2;
+    transition: all 1s ease;
 }
 
 #reclam {
@@ -73,6 +86,13 @@ main {
 .newsLeft {
     width: 65%;
     margin: 25px 5% 25px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#posts {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -111,6 +131,10 @@ main {
 .newsRight #announce {
     background: #48285a;
     color: #fff;
+}
+
+main .btn-danger {
+    margin: auto;
 }
 
 footer {
