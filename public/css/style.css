@@ -104,13 +104,15 @@ main {
     font-weight: 800;
 }
 
-.newsLeft .card {
+.newsLeft .card,
+#posts .card {
     width: 45%;
     margin-right: 5%;
     margin-bottom: 5%;
 }
 
-.newsLeft .card img {
+.newsLeft .card img,
+#posts .card img {
     height: 60%;
 }
 

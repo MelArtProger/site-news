@@ -115,13 +115,13 @@ let addNews = () => {
         el.classList.add('card');
 
         let content = `
-        <img class="card-img-top" alt="${post.title}" src="${post.foto}"/>
-        <div class="card-body" id="${post.id}>
-            <h5 class="card-title">${post.title}</h5> 
-            <p class="card-text">${post.text}</p>
-            <a href="#" class="btn btn-warning">Читать далее</a>
+        <img src="${post.foto}" class="card-img-top">
+        <div class="card-body">
+        <h5 class="card-title">${post.title}</h5> 
+        <p class="card-text">${post.text}</p>
+        <a href="#" class="btn btn-warning">Читать далее</a>
         </div>
-    `
+        `
         el.innerHTML = content;
 
         parent.appendChild(el);
